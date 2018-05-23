@@ -1,8 +1,14 @@
-select customer.State,
-	sum([order].Amount) as 'Total Sales'
-from [order] 
-join customer 
-	on [order].customerid = customer.id
-group by customer.State
-having sum([order].Amount) >= 1000
-order by sum([order].Amount) desc;
+select *
+from [order] o
+left join customer c
+	on o.CustomerID = c.Id;
+
+select count(o.CustomerId)
+from [order] o
+left join customer c
+	on o.CustomerID = c.Id;
+
+select count(o.Amount)
+from [order] o
+left join customer c
+	on o.CustomerID = c.Id;
