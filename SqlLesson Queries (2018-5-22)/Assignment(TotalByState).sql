@@ -1,3 +1,7 @@
+select * from [order] 
+join customer 
+	on [order].customerid = customer.id;
+
 select customer.State,
 	sum([order].Amount) as 'Total Sales'
 from [order] 

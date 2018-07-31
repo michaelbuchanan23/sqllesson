@@ -11,7 +11,7 @@ values
 	('2018-05-23', 100000, 8);
 
 update [order]
-set amount = amount * 2
+set amount = amount *2
 where CustomerId = 8
 
 delete from [order]
